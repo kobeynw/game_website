@@ -23,7 +23,7 @@ function initializePage() {
 }
 
 function fetchReleaseUpdates() {
-    fetch('../data/updates.json')
+    fetch('./data/updates.json')
         .then(response => response.json())
         .then(data => {
             allUpdates = data.updates;
