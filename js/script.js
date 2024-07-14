@@ -1,3 +1,5 @@
+// PAGE INITIALIZATION
+
 let allUpdates = [];
 let currentPage = 1;
 const updatesPerPage = 10;
@@ -21,6 +23,8 @@ function initializePage() {
         }, index * delay);
     });
 }
+
+// RELEASE UPDATES
 
 function fetchReleaseUpdates() {
     fetch('./data/updates.json')
@@ -63,6 +67,8 @@ function showMoreUpdates() {
     displayUpdates();
     setupShowMoreButton();
 }
+
+// SIDEBAR
 
 function initializeSidebar() {
     const sidebar = document.getElementById('sidebar');
@@ -110,6 +116,8 @@ function initializeSidebar() {
     });
 }
 
+// FADE IN EFFECT
+
 const fadeInElements = document.getElementsByClassName('profile');
 
 async function fadeIn() {
@@ -120,6 +128,41 @@ async function fadeIn() {
     await new Promise(resolve => setTimeout(resolve, 500));
     fadeInElements[2].style.opacity = 1;
 }
+
+// IMAGE GALLERY FUNCTIONALITY
+
+let currentImageIndex = 1;
+
+function showImage(index) {
+    const imageElements = document.querySelectorAll('.slider-image');
+    imageElements.forEach((image, i) => {
+        if (i + 1 === index) {
+            image.style.display = 'block';
+        } else {
+            image.style.display = 'none';
+        }
+    });
+}
+
+function nextImage() {
+    if (currentImageIndex < 3) { // Change 3 to the total number of images in your set
+        currentImageIndex++;
+    } else {
+        currentImageIndex = 1;
+    }
+    showImage(currentImageIndex);
+}
+
+function prevImage() {
+    if (currentImageIndex > 1) {
+        currentImageIndex--;
+    } else {
+        currentImageIndex = 3; // Change 3 to the total number of images in your set
+    }
+    showImage(currentImageIndex);
+}
+
+showImage(currentImageIndex);
 
 document.addEventListener('DOMContentLoaded', () => {
     initializePage();
