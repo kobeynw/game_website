@@ -71,10 +71,11 @@ h3 {
 p {
     margin-left: 5%;
     font-size: 18px;
+    line-height: 30px;
 }
 
 img {
-    margin-left: 5%
+    margin-left: 5%;
 }
 
 .profile {
@@ -84,10 +85,13 @@ img {
     transition: opacity 0.75s ease-in-out;
 }
 
-.center {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
+.grid-container {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
+    gap: 10%;
+    margin-left: 7%;
+    margin-right: 7%;
 }
 
 #title {
@@ -231,28 +235,34 @@ button {
     margin-top: 20px;
     position: relative;
     overflow: hidden;
-  }
+}
   
-  .slider-image {
+.slider-image {
     margin-left: auto;
     margin-right: auto;
-    height: 300px;
     display: none;
-  }
-  
-  #prevBtn, #nextBtn {
+}
+
+.center {
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#prevBtn, #nextBtn {
     position: absolute;
     top: 150px;
     font-size: 34px;
     cursor: pointer;
     border: none;
     background: none;
-  }
-  
-  #prevBtn {
+}
+
+#prevBtn {
     left: 10%;
-  }
-  
-  #nextBtn {
+}
+
+#nextBtn {
     right: 10%;
-  }
+}

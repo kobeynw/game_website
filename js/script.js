@@ -145,7 +145,7 @@ function showImage(index) {
 }
 
 function nextImage() {
-    if (currentImageIndex < 3) { // Change 3 to the total number of images in your set
+    if (currentImageIndex < 6) { // Change 3 to the total number of images in your set
         currentImageIndex++;
     } else {
         currentImageIndex = 1;
@@ -157,7 +157,7 @@ function prevImage() {
     if (currentImageIndex > 1) {
         currentImageIndex--;
     } else {
-        currentImageIndex = 3; // Change 3 to the total number of images in your set
+        currentImageIndex = 6; // Change 3 to the total number of images in your set
     }
     showImage(currentImageIndex);
 }
