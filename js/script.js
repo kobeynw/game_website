@@ -131,42 +131,83 @@ async function fadeIn() {
 
 // IMAGE GALLERY FUNCTIONALITY
 
-let currentImageIndex = 1;
+const images = [
+    { src: "./pictures/AI_mineshaft.PNG", alt: "Mine Shaft", title: "World 6: Mine Shaft" },
+    { src: "./pictures/AI_casino.PNG", alt: "Casino", title: "World 1: Casino" },
+    { src: "./pictures/player.jpeg", alt: "Tatto Parlor", title: "World 2: Tatto Parlor" },
+    { src: "./pictures/player.jpeg", alt: "Oil Field", title: "World 3: Oil Field" },
+    { src: "./pictures/player.jpeg", alt: "Oasis", title: "World 4: Oasis" },
+    { src: "./pictures/player.jpeg", alt: "Restaurant", title: "World 5: Restaurant" }
+];
 
-function showImage(index) {
-    const imageElements = document.querySelectorAll('.slider-image');
-    imageElements.forEach((image, i) => {
-        if (i + 1 === index) {
-            image.style.display = 'block';
+let currentIndex = 1;
+
+function createImageElement(image, className) {
+    const div = document.createElement('div');
+    div.className = `slider-image ${className}`;
+    div.innerHTML = `
+        <img src="${image.src}" alt="${image.alt}">
+        <h2>${image.title}</h2>
+    `;
+    return div;
+}
+
+function updateSlider() {
+    const sliderImages = document.querySelector('.slider-images');
+    const farPrevIndex = (currentIndex - 2 + images.length) % images.length;
+    const prevIndex = (currentIndex - 1 + images.length) % images.length;
+    const nextIndex = (currentIndex + 1) % images.length;
+    const farNextIndex = (currentIndex + 2) % images.length;
+
+    sliderImages.innerHTML = '';
+    sliderImages.appendChild(createImageElement(images[farPrevIndex], 'far-prev'));
+    sliderImages.appendChild(createImageElement(images[prevIndex], 'prev'));
+    sliderImages.appendChild(createImageElement(images[currentIndex], 'current'));
+    sliderImages.appendChild(createImageElement(images[nextIndex], 'next'));
+    sliderImages.appendChild(createImageElement(images[farNextIndex], 'far-next'));
+}
+
+function changeImage(direction) {
+    const sliderImages = document.querySelector('.slider-images');
+    const imageElements = sliderImages.querySelectorAll('.slider-image');
+    
+    imageElements.forEach(img => {
+        const currentClass = img.className.split(' ')[1];
+        let newClass;
+        
+        if (direction === 1) {
+            newClass = {
+                'far-prev': 'hidden',
+                'prev': 'far-prev',
+                'current': 'prev',
+                'next': 'current',
+                'far-next': 'next'
+            }[currentClass];
         } else {
-            image.style.display = 'none';
+            newClass = {
+                'far-prev': 'prev',
+                'prev': 'current',
+                'current': 'next',
+                'next': 'far-next',
+                'far-next': 'hidden'
+            }[currentClass];
         }
+        
+        img.className = `slider-image ${newClass}`;
     });
+
+    setTimeout(() => {
+        currentIndex = (currentIndex + direction + images.length) % images.length;
+        updateSlider();
+    }, 500); // This should match the transition duration in CSS
 }
 
-function nextImage() {
-    if (currentImageIndex < 6) { // Change 3 to the total number of images in your set
-        currentImageIndex++;
-    } else {
-        currentImageIndex = 1;
-    }
-    showImage(currentImageIndex);
-}
-
-function prevImage() {
-    if (currentImageIndex > 1) {
-        currentImageIndex--;
-    } else {
-        currentImageIndex = 6; // Change 3 to the total number of images in your set
-    }
-    showImage(currentImageIndex);
-}
-
-showImage(currentImageIndex);
+// MAIN FUNCTION CALLS
 
 document.addEventListener('DOMContentLoaded', () => {
     initializePage();
     fetchReleaseUpdates();
     initializeSidebar();
     fadeIn();
+    updateSlider();
 });

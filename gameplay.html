@@ -31,33 +31,23 @@
             </div>
             <div data-aos="fade-up" data-aos-duration="800">
                 <h3>World Progression</h3>
-                <div class="slider-container">
-                    <button id="prevBtn" onclick="prevImage()">❮</button>
-                    <div class="slider-image">
-                        <img class="center" src="./pictures/AI_casino.PNG" alt="Image" height="300px">
-                        <h2 class="center">Casino</h2>
+                <div id="slider1" class="slider-container">
+                    <button id="prevBtn" onclick="changeImage(-1)">❮</button>
+                    <div class="slider-images">
+                        <div class="slider-image prev">
+                            <img src="./pictures/AI_casino.PNG" alt="Casino">
+                            <h2>Casino</h2>
+                        </div>
+                        <div class="slider-image current">
+                            <img src="./pictures/player.jpeg" alt="Tatto Parlor">
+                            <h2>Tatto Parlor</h2>
+                        </div>
+                        <div class="slider-image next">
+                            <img src="./pictures/player.jpeg" alt="Oil Field">
+                            <h2>Oil Field</h2>
+                        </div>
                     </div>
-                    <div class="slider-image">
-                        <img class="center" src="./pictures/player.jpeg" alt="Image" height="300px">
-                        <h2 class="center">Tatto Parlor</h2>
-                    </div>
-                    <div class="slider-image">
-                        <img class="center" src="./pictures/player.jpeg" alt="Image" height="300px">
-                        <h2 class="center">Oil Field</h2>
-                    </div>
-                    <div class="slider-image">
-                        <img class="center" src="./pictures/player.jpeg" alt="Image" height="300px">
-                        <h2 class="center">Oasis</h2>
-                    </div>
-                    <div class="slider-image">
-                        <img class="center" src="./pictures/player.jpeg" alt="Image" height="300px">
-                        <h2 class="center">Restaurant</h2>
-                    </div>
-                    <div class="slider-image">
-                        <img class="center" src="./pictures/AI_mineshaft.PNG" alt="Image" height="300px">
-                        <h2 class="center">Mine Shaft</h2>
-                    </div>
-                    <button id="nextBtn" onclick="nextImage()">❯</button>
+                    <button id="nextBtn" onclick="changeImage(1)">❯</button>
                 </div>
             </div>
             <div data-aos="fade-up" data-aos-duration="800">
