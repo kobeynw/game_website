@@ -1,3 +1,5 @@
+/*=================================== MAIN VARIABLES ===================================*/
+
 :root {
     --body: #DFD5A5;
     --navbar-background: #DBAD6A;
@@ -15,6 +17,8 @@
     font-style: normal;
 }
 
+/*================================= BASIC HTML ELEMENTS ================================*/
+
 body {
     background-color: var(--body);
     font-family: Inconsolata, monospace;
@@ -25,47 +29,12 @@ body {
     transition: margin-left 0.3s ease-in-out;
 }
 
-h1 span {
-    display: inline-block;
-    transition: transform 0.3s ease-in-out;
-}
-
-@keyframes bounce {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-20px);
-    }
-}
-
-.bounce {
-    animation: bounce 0.6s ease-in-out;
-}
-
 h3 {
     color: var(--subheading);
     font-size: 30px;
     font-weight: 700;
     margin-top: 50px;
     margin-left: 8%;
-}
-
-.sublist li {
-    font-size: 22px;
-    font-weight: 570;
-    margin-top: 20px;
-    margin-left: 3%;
-    list-style-type:none;
-    position: relative;
-    padding-left: 22px;
-    z-index: -1;
-}
-
-.sublist li::before {
-    content: "\25BA"; /* Unicode for bullet point */
-    position: absolute;
-    left: 0;
 }
 
 p {
@@ -82,6 +51,8 @@ img {
     max-width: 90%;
     height: auto;
 }
+
+/*============================== GENERAL CLASSES AND IDS ===============================*/
 
 .profile {
     border: 7px solid var(--other);
@@ -108,6 +79,28 @@ img {
     text-align: center;
 }
 
+/*============================= PAGE TITLE BOUNCE ANIMATION ============================*/
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-20px);
+    }
+}
+
+h1 span {
+    display: inline-block;
+    transition: transform 0.3s ease-in-out;
+}
+
+.bounce {
+    animation: bounce 0.6s ease-in-out;
+}
+
+/*======================================== NAVBAR ======================================*/
+
 #navbar {
     background-color: var(--navbar-background);
     position: fixed;
@@ -131,24 +124,7 @@ img {
     color: var(--a-hover);
 }
 
-#show-more {
-    display: block;
-    margin: 20px auto;
-    padding: 10px 20px;
-    background-color: var(--navbar-background);
-    color: var(--navbar-a);
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-}
-
-#show-more:hover {
-    background-color: var(--other);
-}
-
-.link a:hover {
-    color: var(--a-hover)
-}
+/*======================================= SIDEBAR ======================================*/
 
 #sidebar-toggle {
     position: fixed;
@@ -230,6 +206,52 @@ button {
     font-size: 25px;
 }
 
+/*==================================== BOTTOM BLOCK ====================================*/
+
+#bottom-block {
+    background-color: var(--navbar-a);
+    margin-top: 250px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    margin-bottom: -10px;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+
+.bottom {
+    color: white;
+    text-align: center;
+    list-style-type: none;
+}
+
+.bottom li {
+    display: inline-block;
+    padding: 0px 5px;
+}
+
+/*========================== RELEASE UPDATES SHOW MORE BUTTON ==========================*/
+
+#show-more {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-color: var(--navbar-background);
+    color: var(--navbar-a);
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#show-more:hover {
+    background-color: var(--other);
+}
+
+.link a:hover {
+    color: var(--a-hover)
+}
+
+/*==================================== IMAGE GALLERY ===================================*/
+
 .slider-container {
     position: relative;
     width: 100%;
@@ -253,8 +275,8 @@ button {
     align-items: center;
     justify-content: center;
     transition: all 0.5s ease-in-out;
-    width: 60%; /* Adjust this value as needed */
-    max-width: 400px; /* Adjust this value as needed */
+    width: 60%;
+    max-width: 400px;
 }
 
 .slider-image img {
@@ -265,7 +287,7 @@ button {
 
 .slider-image h2 {
     margin-top: 10px;
-    font-size: 1em; /* Adjust as needed */
+    font-size: 1em;
     text-align: center;
 }
 
@@ -321,25 +343,4 @@ button {
 
 #nextBtn {
     right: 10%;
-}
-
-#bottom-block {
-    background-color: var(--navbar-a);
-    margin-top: 250px;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    margin-bottom: -10px;
-    margin-left: -10px;
-    margin-right: -10px;
-}
-
-.bottom {
-    color: white;
-    text-align: center;
-    list-style-type: none;
-}
-
-.bottom li {
-    display: inline-block;
-    padding: 0px 5px;
 }
