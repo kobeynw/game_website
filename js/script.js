@@ -133,11 +133,11 @@ async function fadeIn() {
 
 const images = [
     { src: "./pictures/AI_mineshaft.PNG", alt: "Mine Shaft", title: "World 6: Mine Shaft" },
+    { src: "./pictures/AI_Restaurant.PNG", alt: "Restaurant", title: "World 5: Restaurant" },
     { src: "./pictures/AI_casino.PNG", alt: "Casino", title: "World 1: Casino" },
     { src: "./pictures/AI_TattooParlor.PNG", alt: "Tatto Parlor", title: "World 2: Tatto Parlor" },
-    { src: "./pictures/AI_OilField.PNG", alt: "Oil Field", title: "World 3: Oil Field" },
     { src: "./pictures/AI_Oasis.PNG", alt: "Oasis", title: "World 4: Oasis" },
-    { src: "./pictures/AI_Restaurant.PNG", alt: "Restaurant", title: "World 5: Restaurant" }
+    { src: "./pictures/AI_OilField.PNG", alt: "Oil Field", title: "World 3: Oil Field" }
 ];
 
 let currentIndex = 1;

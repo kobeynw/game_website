@@ -1,8 +1,12 @@
 {
   "updates": [
     {
+      "date": "07/22/2024",
+      "content": "Implemented the basic model for collecting tokens: Tokens are awarded after completing a level having gotten all collectibles. The current system awards a bronze token for an easy level, silver token for a medium level, and gold token for a hard level. Bronze tokens can be used in the slot machine to get a basic avatar, silver grants a rarer avatar, and gold grants an even rarer avatar."
+    },
+    {
       "date": "07/17/2024",
-      "content": "Finished rough drafts for the main theme music and theme music for each world."
+      "content": "Finished rough drafts for the main theme music and theme music for each world. Thanks to Udio, the AI music software we are using to compose the themes. Over time the soundtrack will be refined, but these tracks can serve as placeholders temporarily."
     },
     {
       "date": "07/13/2024",
@@ -10,11 +14,11 @@
     },
     {
       "date": "07/09/2024",
-      "content": "New mosquito enemy created!"
+      "content": "New mosquito enemy created! The mosquito enemy is especially devious since it will actively try to attack the player."
     },
     {
       "date": "07/05/2024",
-      "content": "All 6 levels of World 1 completed, along with all 6 levels of World 2."
+      "content": "All 6 levels of World 1 completed, along with all 6 levels of World 2. The first version of the demo will be releasing soon!"
     },
     {
       "date": "06/25/2024",
@@ -26,7 +30,7 @@
     },
     {
       "date": "05/21/2024",
-      "content": "First 4 levels of World 1 completed."
+      "content": "First 4 levels of World 1 completed. Expect an increase in updates and development this Summer since we should have more time to dedicate to the game!"
     }
   ]
 }
