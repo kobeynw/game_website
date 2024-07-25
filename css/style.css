@@ -54,6 +54,14 @@ img {
 
 /*============================== GENERAL CLASSES AND IDS ===============================*/
 
+#logo {
+    filter: grayscale(100%) brightness(0%); 
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 500px;
+}
+
 .profile {
     border: 7px solid var(--other);
     box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
