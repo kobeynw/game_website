@@ -1,6 +1,10 @@
 {
   "updates": [
     {
+      "date": "07/26/2024",
+      "content": "World 3 is now complete, along with a new tutorial level for beginners. New matchbox enemy created!"
+    },
+    {
       "date": "07/22/2024",
       "content": "Implemented the basic model for collecting tokens: Tokens are awarded after completing a level having gotten all collectibles. The current system awards a bronze token for an easy level, silver token for a medium level, and gold token for a hard level. Bronze tokens can be used in the slot machine to get a basic avatar, silver grants a rarer avatar, and gold grants an even rarer avatar."
     },
