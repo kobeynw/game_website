@@ -2,7 +2,7 @@
 
 let allUpdates = [];
 let currentPage = 1;
-const updatesPerPage = 10;
+const updatesPerPage = 8;
 
 function initializePage() {
     const delay = 75;

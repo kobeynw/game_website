@@ -69,6 +69,11 @@ img {
     transition: opacity 0.75s ease-in-out;
 }
 
+.screenshot {
+    border: 7px solid var(--other);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.5);
+}
+
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(350px, 5fr));
@@ -219,8 +224,8 @@ button {
 #bottom-block {
     background-color: var(--navbar-a);
     margin-top: 250px;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 0px;
+    padding-bottom: 50px;
     margin-bottom: -10px;
     margin-left: -10px;
     margin-right: -10px;
