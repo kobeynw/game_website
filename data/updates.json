@@ -1,6 +1,10 @@
 {
   "updates": [
     {
+      "date": "09/21/2024",
+      "content": "Latest version of the demo is now live!"
+    },
+    {
       "date": "08/04/2024",
       "content": "Implemented ability to defeat enemies using the lasso. Players can now lasso an enemy and attempt a 'super jump' by parrying."
     },
